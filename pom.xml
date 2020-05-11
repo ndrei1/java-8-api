@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.foxminded.andrei</groupId>
+    <artifactId>anagram</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <junit-jupiter.version>5.1.1</junit-jupiter.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <scope>test</scope>
+            <version>${junit-jupiter.version}</version>
+        </dependency>
+
+        <dependency>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <groupId>org.mockito</groupId>
+            <scope>test</scope>
+            <version>3.0.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+
+            <!-- Need at least 2.22.0 to support JUnit 5 -->
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>3.0.0-M3</version>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>3.8.1</version>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
+
+
+
+
+
